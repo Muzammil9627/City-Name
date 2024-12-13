@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>
+        check your city
+        <input type="text" id="city">
+    </label>
+    <button onclick="Click()">Check</button>
+
+    <script>
+        function Click(){
+            let usercity = document.getElementById("city").value;
+            let newarr = ["Karachi","Lahore","Quetta","Punjab","Peshawar","Badin"]
+            let match = "no"
+            for(i=0; i<=newarr.length; i++){
+                if(usercity == newarr[i]){
+                    match="yes"
+                    break
+                }
+            }
+            if (match=="no"){
+                alert("city did not match")    
+            }else{
+                alert("city match congratulation")
+            }
+        }
+    </script>
+</body>
+</html>
